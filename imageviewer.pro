@@ -1,20 +1,10 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2017-11-29T15:27:28
-#
-#-------------------------------------------------
+QT += widgets
+qtHaveModule(printsupport): QT += printsupport
 
-QT       += core gui
+HEADERS       = imageviewer.h
+SOURCES       = imageviewer.cpp \
+                main.cpp
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
-TARGET = imageviewer
-TEMPLATE = app
-
-
-SOURCES += main.cpp\
-        mainwindow.cpp
-
-HEADERS  += mainwindow.h
-
-FORMS    += mainwindow.ui
+# install
+target.path = $$[QT_INSTALL_EXAMPLES]/widgets/widgets/imageviewer
+INSTALLS += target
